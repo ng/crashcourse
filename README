@@ -1,3 +1,11 @@
-These assets will make more sense if you're following my posts. You can find the posts at my blog:
+These assets will make more sense if you're following my posts. 
 
+You can find the posts at my blog:
 http://jonathansng.com/my-rails-20-tutorials/
+
+Be aware that the posts on my blog were written when Rails 2.0 was just released...we're at 2.3 now! There are going to be differences that I will need to address later.
+
+These applications were created for Rails 2.3. What version are you running?
+
+ng$ rails -v
+Rails 2.3.0
