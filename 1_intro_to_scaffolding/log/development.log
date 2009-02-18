@@ -1,0 +1,53 @@
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (28.0ms)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (8.2ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (2.2ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateBooks (20090218074803)
+  [4;36;1mSQL (3.1ms)[0m   [0;1mCREATE TABLE "books" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "description" text, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (2.8ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090218074803')[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mPRAGMA index_list("books")[0m
+
+
+Processing BooksController#index (for 127.0.0.1 at 2009-02-17 23:59:52) [GET]
+  [4;36;1mBook Load (0.6ms)[0m   [0;1mSELECT * FROM "books" [0m
+Rendering template within layouts/books
+Rendering books/index
+Completed in 20ms (View: 13, DB: 1) | 200 OK [http://localhost/books]
+
+
+Processing BooksController#new (for 127.0.0.1 at 2009-02-17 23:59:53) [GET]
+Rendering template within layouts/books
+Rendering books/new
+Completed in 65ms (View: 61, DB: 0) | 200 OK [http://localhost/books/new]
+
+
+Processing BooksController#create (for 127.0.0.1 at 2009-02-17 23:59:58) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"frH2BO7tgpJaStx5hvYHMjDHpb0xt+NWgNf7T1BFGa8=", "book"=>{"title"=>"Freakonomics", "description"=>"Economics is not widely considered to be one of the sexier sciences. The annual Nobel Prize winner in that field never receives as much publicity as his or her compatriots in peace, literature, or physics. But if such slights are based on the notion that economics is dull, or that economists are concerned only with finance itself, Steven D. Levitt will change some minds. In Freakonomics (written with Stephen J. Dubner), Levitt argues that many apparent mysteries of everyday life don't need to be so mysterious: they could be illuminated and made even more fascinating by asking the right questions and drawing connections. For example, Levitt traces the drop in violent crime rates to a drop in violent criminals and, digging further, to the Roe v. Wade decision that preempted the existence of some people who would be born to poverty and hardship. Elsewhere, by analyzing data gathered from inner-city Chicago drug-dealing gangs, Levitt outlines a corporate structure much like McDonald's, where the top bosses make great money while scores of underlings make something below minimum wage. And in a section that may alarm or relieve worried parents, Levitt argues that parenting methods don't really matter much and that a backyard swimming pool is much more dangerous than a gun. These enlightening chapters are separated by effusive passages from Dubner's 2003 profile of Levitt in The New York Times Magazine, which led to the book being written. In a book filled with bold logic, such back-patting veers Freakonomics, however briefly, away from what Levitt actually has to say. Although maybe there's a good economic reason for that too, and we're just not getting it yet. --John Moe"}}
+  [4;35;1mBook Create (1.3ms)[0m   [0mINSERT INTO "books" ("updated_at", "title", "description", "created_at") VALUES('2009-02-18 07:59:58', 'Freakonomics', 'Economics is not widely considered to be one of the sexier sciences. The annual Nobel Prize winner in that field never receives as much publicity as his or her compatriots in peace, literature, or physics. But if such slights are based on the notion that economics is dull, or that economists are concerned only with finance itself, Steven D. Levitt will change some minds. In Freakonomics (written with Stephen J. Dubner), Levitt argues that many apparent mysteries of everyday life don''t need to be so mysterious: they could be illuminated and made even more fascinating by asking the right questions and drawing connections. For example, Levitt traces the drop in violent crime rates to a drop in violent criminals and, digging further, to the Roe v. Wade decision that preempted the existence of some people who would be born to poverty and hardship. Elsewhere, by analyzing data gathered from inner-city Chicago drug-dealing gangs, Levitt outlines a corporate structure much like McDonald''s, where the top bosses make great money while scores of underlings make something below minimum wage. And in a section that may alarm or relieve worried parents, Levitt argues that parenting methods don''t really matter much and that a backyard swimming pool is much more dangerous than a gun. These enlightening chapters are separated by effusive passages from Dubner''s 2003 profile of Levitt in The New York Times Magazine, which led to the book being written. In a book filled with bold logic, such back-patting veers Freakonomics, however briefly, away from what Levitt actually has to say. Although maybe there''s a good economic reason for that too, and we''re just not getting it yet. --John Moe', '2009-02-18 07:59:58')[0m
+Redirected to #<Book:0x24cb9fc>
+Completed in 17ms (DB: 1) | 302 Found [http://localhost/books]
+
+
+Processing BooksController#show (for 127.0.0.1 at 2009-02-17 23:59:58) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mBook Load (0.2ms)[0m   [0;1mSELECT * FROM "books" WHERE ("books"."id" = 1) [0m
+Rendering template within layouts/books
+Rendering books/show
+Completed in 15ms (View: 9, DB: 0) | 200 OK [http://localhost/books/1]
