@@ -1,0 +1,711 @@
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-02-17 23:56:10) [GET]
+
+ActionController::RoutingError (No route matches "/" with {:method=>:get}):
+  /Users/admin/.gem/ruby/1.8/gems/actionpack-2.3.0/lib/action_controller/routing/recognition_optimisation.rb:66:in `recognize_path'
+  /Users/admin/.gem/ruby/1.8/gems/actionpack-2.3.0/lib/action_controller/routing/route_set.rb:437:in `recognize'
+  /Users/admin/.gem/ruby/1.8/gems/actionpack-2.3.0/lib/action_controller/routing/route_set.rb:432:in `call'
+  /Users/admin/.gem/ruby/1.8/gems/actionpack-2.3.0/lib/action_controller/dispatcher.rb:65:in `dispatch'
+  /Users/admin/.gem/ruby/1.8/gems/actionpack-2.3.0/lib/action_controller/dispatcher.rb:88:in `_call'
+  /Users/admin/.gem/ruby/1.8/gems/actionpack-2.3.0/lib/action_controller/dispatcher.rb:59:in `initialize'
+  /Users/admin/.gem/ruby/1.8/gems/activerecord-2.3.0/lib/active_record/query_cache.rb:29:in `call'
+  /Users/admin/.gem/ruby/1.8/gems/activerecord-2.3.0/lib/active_record/query_cache.rb:29:in `call'
+  /Users/admin/.gem/ruby/1.8/gems/activerecord-2.3.0/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+  /Users/admin/.gem/ruby/1.8/gems/activerecord-2.3.0/lib/active_record/query_cache.rb:9:in `cache'
+  /Users/admin/.gem/ruby/1.8/gems/activerecord-2.3.0/lib/active_record/query_cache.rb:28:in `call'
+  /Users/admin/.gem/ruby/1.8/gems/actionpack-2.3.0/lib/action_controller/params_parser.rb:15:in `call'
+  /Users/admin/.gem/ruby/1.8/gems/actionpack-2.3.0/lib/action_controller/rewindable_input.rb:25:in `call'
+  /Users/admin/.gem/ruby/1.8/gems/actionpack-2.3.0/lib/action_controller/session/cookie_store.rb:93:in `call'
+  /Users/admin/.gem/ruby/1.8/gems/actionpack-2.3.0/lib/action_controller/failsafe.rb:11:in `call'
+  /Users/admin/.gem/ruby/1.8/gems/actionpack-2.3.0/lib/action_controller/rack_ext/lock.rb:15:in `call'
+  /Users/admin/.gem/ruby/1.8/gems/actionpack-2.3.0/lib/action_controller/rack_ext/lock.rb:15:in `synchronize'
+  /Users/admin/.gem/ruby/1.8/gems/actionpack-2.3.0/lib/action_controller/rack_ext/lock.rb:15:in `call'
+  /Users/admin/.gem/ruby/1.8/gems/actionpack-2.3.0/lib/action_controller/dispatcher.rb:83:in `call'
+  /Users/admin/.gem/ruby/1.8/gems/rails-2.3.0/lib/rails/rack/static.rb:27:in `call'
+  /Users/admin/.gem/ruby/1.8/gems/rails-2.3.0/lib/rails/rack/log_tailer.rb:17:in `call'
+  /Users/admin/.gem/ruby/1.8/gems/rails-2.3.0/lib/commands/server.rb:100
+
+Rendering rescues/layout (not_found)
+
+
+Processing BooksController#index (for 127.0.0.1 at 2009-02-17 23:58:10) [GET]
+  [4;36;1mBook Load (0.0ms)[0m   [0;1mSQLite3::SQLException: no such table: books: SELECT * FROM "books" [0m
+
+ActiveRecord::StatementInvalid (SQLite3::SQLException: no such table: books: SELECT * FROM "books" ):
+  /Users/admin/.gem/ruby/1.8/gems/activerecord-2.3.0/lib/active_record/connection_adapters/abstract_adapter.rb:212:in `log'
+  /Users/admin/.gem/ruby/1.8/gems/activerecord-2.3.0/lib/active_record/connection_adapters/sqlite_adapter.rb:132:in `execute'
+  /Users/admin/.gem/ruby/1.8/gems/activerecord-2.3.0/lib/active_record/connection_adapters/sqlite_adapter.rb:372:in `catch_schema_changes'
+  /Users/admin/.gem/ruby/1.8/gems/activerecord-2.3.0/lib/active_record/connection_adapters/sqlite_adapter.rb:132:in `execute'
+  /Users/admin/.gem/ruby/1.8/gems/activerecord-2.3.0/lib/active_record/connection_adapters/sqlite_adapter.rb:275:in `select'
+  /Users/admin/.gem/ruby/1.8/gems/activerecord-2.3.0/lib/active_record/connection_adapters/abstract/database_statements.rb:7:in `select_all_without_query_cache'
+  /Users/admin/.gem/ruby/1.8/gems/activerecord-2.3.0/lib/active_record/connection_adapters/abstract/query_cache.rb:60:in `select_all'
+  /Users/admin/.gem/ruby/1.8/gems/activerecord-2.3.0/lib/active_record/connection_adapters/abstract/query_cache.rb:81:in `cache_sql'
+  /Users/admin/.gem/ruby/1.8/gems/activerecord-2.3.0/lib/active_record/connection_adapters/abstract/query_cache.rb:60:in `select_all'
+  /Users/admin/.gem/ruby/1.8/gems/activerecord-2.3.0/lib/active_record/base.rb:661:in `find_by_sql'
+  /Users/admin/.gem/ruby/1.8/gems/activerecord-2.3.0/lib/active_record/base.rb:1554:in `find_every'
+  /Users/admin/.gem/ruby/1.8/gems/activerecord-2.3.0/lib/active_record/base.rb:615:in `find'
+  app/controllers/books_controller.rb:5:in `index'
+  /Users/admin/.gem/ruby/1.8/gems/actionpack-2.3.0/lib/action_controller/base.rb:1261:in `send'
+  /Users/admin/.gem/ruby/1.8/gems/actionpack-2.3.0/lib/action_controller/base.rb:1261:in `perform_action_without_filters'
+  /Users/admin/.gem/ruby/1.8/gems/actionpack-2.3.0/lib/action_controller/filters.rb:617:in `call_filters'
+  /Users/admin/.gem/ruby/1.8/gems/actionpack-2.3.0/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+  /Users/admin/.gem/ruby/1.8/gems/actionpack-2.3.0/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+  /Users/admin/.gem/ruby/1.8/gems/actionpack-2.3.0/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+  /Users/admin/.gem/ruby/1.8/gems/actionpack-2.3.0/lib/action_controller/rescue.rb:154:in `perform_action_without_flash'
+  /Users/admin/.gem/ruby/1.8/gems/actionpack-2.3.0/lib/action_controller/flash.rb:141:in `perform_action'
+  /Users/admin/.gem/ruby/1.8/gems/actionpack-2.3.0/lib/action_controller/base.rb:523:in `send'
+  /Users/admin/.gem/ruby/1.8/gems/actionpack-2.3.0/lib/action_controller/base.rb:523:in `process_without_filters'
+  /Users/admin/.gem/ruby/1.8/gems/actionpack-2.3.0/lib/action_controller/filters.rb:606:in `process'
+  /Users/admin/.gem/ruby/1.8/gems/actionpack-2.3.0/lib/action_controller/base.rb:391:in `process'
+  /Users/admin/.gem/ruby/1.8/gems/actionpack-2.3.0/lib/action_controller/base.rb:386:in `call'
+  /Users/admin/.gem/ruby/1.8/gems/actionpack-2.3.0/lib/action_controller/routing/route_set.rb:433:in `call'
+  /Users/admin/.gem/ruby/1.8/gems/actionpack-2.3.0/lib/action_controller/dispatcher.rb:65:in `dispatch'
+  /Users/admin/.gem/ruby/1.8/gems/actionpack-2.3.0/lib/action_controller/dispatcher.rb:88:in `_call'
+  /Users/admin/.gem/ruby/1.8/gems/actionpack-2.3.0/lib/action_controller/dispatcher.rb:59:in `initialize'
+  /Users/admin/.gem/ruby/1.8/gems/activerecord-2.3.0/lib/active_record/query_cache.rb:29:in `call'
+  /Users/admin/.gem/ruby/1.8/gems/activerecord-2.3.0/lib/active_record/query_cache.rb:29:in `call'
+  /Users/admin/.gem/ruby/1.8/gems/activerecord-2.3.0/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+  /Users/admin/.gem/ruby/1.8/gems/activerecord-2.3.0/lib/active_record/query_cache.rb:9:in `cache'
+  /Users/admin/.gem/ruby/1.8/gems/activerecord-2.3.0/lib/active_record/query_cache.rb:28:in `call'
+  /Users/admin/.gem/ruby/1.8/gems/actionpack-2.3.0/lib/action_controller/params_parser.rb:15:in `call'
+  /Users/admin/.gem/ruby/1.8/gems/actionpack-2.3.0/lib/action_controller/rewindable_input.rb:25:in `call'
+  /Users/admin/.gem/ruby/1.8/gems/actionpack-2.3.0/lib/action_controller/session/cookie_store.rb:93:in `call'
+  /Users/admin/.gem/ruby/1.8/gems/actionpack-2.3.0/lib/action_controller/failsafe.rb:11:in `call'
+  /Users/admin/.gem/ruby/1.8/gems/actionpack-2.3.0/lib/action_controller/rack_ext/lock.rb:15:in `call'
+  /Users/admin/.gem/ruby/1.8/gems/actionpack-2.3.0/lib/action_controller/rack_ext/lock.rb:15:in `synchronize'
+  /Users/admin/.gem/ruby/1.8/gems/actionpack-2.3.0/lib/action_controller/rack_ext/lock.rb:15:in `call'
+  /Users/admin/.gem/ruby/1.8/gems/actionpack-2.3.0/lib/action_controller/dispatcher.rb:83:in `call'
+  /Users/admin/.gem/ruby/1.8/gems/rails-2.3.0/lib/rails/rack/static.rb:27:in `call'
+  /Users/admin/.gem/ruby/1.8/gems/rails-2.3.0/lib/rails/rack/log_tailer.rb:17:in `call'
+  /Users/admin/.gem/ruby/1.8/gems/rails-2.3.0/lib/commands/server.rb:100
+
+Rendered rescues/_trace (29.3ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (2.8ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (2.6ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateBooks (20090218074803)
+  [4;36;1mSQL (3.2ms)[0m   [0;1mCREATE TABLE "books" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "description" text, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (2.7ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090218074803')[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("books")[0m
+
+
+Processing BooksController#index (for 127.0.0.1 at 2009-02-17 23:58:28) [GET]
+  [4;35;1mBook Load (0.4ms)[0m   [0mSELECT * FROM "books" [0m
+Rendering template within layouts/books
+Rendering books/index
+Completed in 100ms (View: 95, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing BooksController#index (for 127.0.0.1 at 2009-02-17 23:58:30) [GET]
+  [4;36;1mBook Load (0.3ms)[0m   [0;1mSELECT * FROM "books" [0m
+Rendering template within layouts/books
+Rendering books/index
+Completed in 13ms (View: 9, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing BooksController#new (for 127.0.0.1 at 2009-02-17 23:58:33) [GET]
+Rendering template within layouts/books
+Rendering books/new
+Completed in 16ms (View: 12, DB: 0) | 200 OK [http://localhost/books/new]
+
+
+Processing BooksController#create (for 127.0.0.1 at 2009-02-17 23:59:20) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"frH2BO7tgpJaStx5hvYHMjDHpb0xt+NWgNf7T1BFGa8=", "book"=>{"title"=>"Freakonomics", "description"=>"Economics is not widely considered to be one of the sexier sciences. The annual Nobel Prize winner in that field never receives as much publicity as his or her compatriots in peace, literature, or physics. But if such slights are based on the notion that economics is dull, or that economists are concerned only with finance itself, Steven D. Levitt will change some minds. In Freakonomics (written with Stephen J. Dubner), Levitt argues that many apparent mysteries of everyday life don't need to be so mysterious: they could be illuminated and made even more fascinating by asking the right questions and drawing connections. For example, Levitt traces the drop in violent crime rates to a drop in violent criminals and, digging further, to the Roe v. Wade decision that preempted the existence of some people who would be born to poverty and hardship. Elsewhere, by analyzing data gathered from inner-city Chicago drug-dealing gangs, Levitt outlines a corporate structure much like McDonald's, where the top bosses make great money while scores of underlings make something below minimum wage. And in a section that may alarm or relieve worried parents, Levitt argues that parenting methods don't really matter much and that a backyard swimming pool is much more dangerous than a gun. These enlightening chapters are separated by effusive passages from Dubner's 2003 profile of Levitt in The New York Times Magazine, which led to the book being written. In a book filled with bold logic, such back-patting veers Freakonomics, however briefly, away from what Levitt actually has to say. Although maybe there's a good economic reason for that too, and we're just not getting it yet. --John Moe "}}
+  [4;35;1mBook Create (12.0ms)[0m   [0mINSERT INTO "books" ("updated_at", "title", "description", "created_at") VALUES('2009-02-18 07:59:20', 'Freakonomics', 'Economics is not widely considered to be one of the sexier sciences. The annual Nobel Prize winner in that field never receives as much publicity as his or her compatriots in peace, literature, or physics. But if such slights are based on the notion that economics is dull, or that economists are concerned only with finance itself, Steven D. Levitt will change some minds. In Freakonomics (written with Stephen J. Dubner), Levitt argues that many apparent mysteries of everyday life don''t need to be so mysterious: they could be illuminated and made even more fascinating by asking the right questions and drawing connections. For example, Levitt traces the drop in violent crime rates to a drop in violent criminals and, digging further, to the Roe v. Wade decision that preempted the existence of some people who would be born to poverty and hardship. Elsewhere, by analyzing data gathered from inner-city Chicago drug-dealing gangs, Levitt outlines a corporate structure much like McDonald''s, where the top bosses make great money while scores of underlings make something below minimum wage. And in a section that may alarm or relieve worried parents, Levitt argues that parenting methods don''t really matter much and that a backyard swimming pool is much more dangerous than a gun. These enlightening chapters are separated by effusive passages from Dubner''s 2003 profile of Levitt in The New York Times Magazine, which led to the book being written. In a book filled with bold logic, such back-patting veers Freakonomics, however briefly, away from what Levitt actually has to say. Although maybe there''s a good economic reason for that too, and we''re just not getting it yet. --John Moe ', '2009-02-18 07:59:20')[0m
+Redirected to #<Book:0x21b2bf8>
+Completed in 50ms (DB: 12) | 302 Found [http://localhost/books]
+
+
+Processing BooksController#show (for 127.0.0.1 at 2009-02-17 23:59:20) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mBook Load (0.2ms)[0m   [0;1mSELECT * FROM "books" WHERE ("books"."id" = 1) [0m
+Rendering template within layouts/books
+Rendering books/show
+Completed in 21ms (View: 17, DB: 0) | 200 OK [http://localhost/books/1]
+
+
+Processing BooksController#index (for 127.0.0.1 at 2009-02-17 23:59:22) [GET]
+  [4;35;1mBook Load (0.5ms)[0m   [0mSELECT * FROM "books" [0m
+Rendering template within layouts/books
+Rendering books/index
+Completed in 73ms (View: 69, DB: 0) | 200 OK [http://localhost/books]
+
+
+Processing BooksController#new (for 127.0.0.1 at 2009-02-17 23:59:23) [GET]
+Rendering template within layouts/books
+Rendering books/new
+Completed in 18ms (View: 14, DB: 0) | 200 OK [http://localhost/books/new]
+
+
+Processing BooksController#create (for 127.0.0.1 at 2009-02-17 23:59:38) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"frH2BO7tgpJaStx5hvYHMjDHpb0xt+NWgNf7T1BFGa8=", "book"=>{"title"=>"Blink", "description"=>"Blink is about the first two seconds of looking--the decisive glance that knows in an instant. Gladwell, the best-selling author of The Tipping Point, campaigns for snap judgments and mind reading with a gift for translating research into splendid storytelling. Building his case with scenes from a marriage, heart attack triage, speed dating, choking on the golf course, selling cars, and military maneuvers, he persuades readers to think small and focus on the meaning of \"thin slices\" of behavior. The key is to rely on our \"adaptive unconscious\"--a 24/7 mental valet--that provides us with instant and sophisticated information to warn of danger, read a stranger, or react to a new idea.\r\nGladwell includes caveats about leaping to conclusions: marketers can manipulate our first impressions, high arousal moments make us \"mind blind,\" focusing on the wrong cue leaves us vulnerable to \"the Warren Harding Effect\" (i.e., voting for a handsome but hapless president). In a provocative chapter that exposes the \"dark side of blink,\" he illuminates the failure of rapid cognition in the tragic stakeout and murder of Amadou Diallo in the Bronx. He underlines studies about autism, facial reading and cardio uptick to urge training that enhances high-stakes decision-making. In this brilliant, cage-rattling book, one can only wish for a thicker slice of Gladwell's ideas about what Blink Camp might look like. --Barbara Mackoff --This text refers to the Hardcover edition. "}}
+  [4;36;1mBook Create (0.4ms)[0m   [0;1mINSERT INTO "books" ("updated_at", "title", "description", "created_at") VALUES('2009-02-18 07:59:38', 'Blink', 'Blink is about the first two seconds of looking--the decisive glance that knows in an instant. Gladwell, the best-selling author of The Tipping Point, campaigns for snap judgments and mind reading with a gift for translating research into splendid storytelling. Building his case with scenes from a marriage, heart attack triage, speed dating, choking on the golf course, selling cars, and military maneuvers, he persuades readers to think small and focus on the meaning of "thin slices" of behavior. The key is to rely on our "adaptive unconscious"--a 24/7 mental valet--that provides us with instant and sophisticated information to warn of danger, read a stranger, or react to a new idea.
+Gladwell includes caveats about leaping to conclusions: marketers can manipulate our first impressions, high arousal moments make us "mind blind," focusing on the wrong cue leaves us vulnerable to "the Warren Harding Effect" (i.e., voting for a handsome but hapless president). In a provocative chapter that exposes the "dark side of blink," he illuminates the failure of rapid cognition in the tragic stakeout and murder of Amadou Diallo in the Bronx. He underlines studies about autism, facial reading and cardio uptick to urge training that enhances high-stakes decision-making. In this brilliant, cage-rattling book, one can only wish for a thicker slice of Gladwell''s ideas about what Blink Camp might look like. --Barbara Mackoff --This text refers to the Hardcover edition. ', '2009-02-18 07:59:38')[0m
+Redirected to #<Book:0x241ac60>
+Completed in 9ms (DB: 0) | 302 Found [http://localhost/books]
+
+
+Processing BooksController#show (for 127.0.0.1 at 2009-02-17 23:59:38) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mBook Load (0.2ms)[0m   [0mSELECT * FROM "books" WHERE ("books"."id" = 2) [0m
+Rendering template within layouts/books
+Rendering books/show
+Completed in 17ms (View: 12, DB: 0) | 200 OK [http://localhost/books/2]
+
+
+Processing BooksController#index (for 127.0.0.1 at 2009-02-17 23:59:40) [GET]
+  [4;36;1mBook Load (0.5ms)[0m   [0;1mSELECT * FROM "books" [0m
+Rendering template within layouts/books
+Rendering books/index
+Completed in 15ms (View: 11, DB: 0) | 200 OK [http://localhost/books]
+  [4;36;1mSQL (1.1ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateBooks (20090218074803)
+Migrating to CreateAuthors (20090218080739)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (3.7ms)[0m   [0mCREATE TABLE "authors" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (2.8ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20090218080739')[0m
+  [4;35;1mSQL (0.4ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("authors")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("books")[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateBooks (20090218074803)
+Migrating to CreateAuthors (20090218080739)
+Migrating to AddAuthorIdToBooks (20090218080838)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (3.1ms)[0m   [0mALTER TABLE "books" ADD "author_id" int[0m
+  [4;36;1mSQL (103.0ms)[0m   [0;1mVACUUM[0m
+  [4;35;1mSQL (2.7ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090218080838')[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("authors")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("books")[0m
+
+
+Processing BooksController#index (for 127.0.0.1 at 2009-02-18 00:10:47) [GET]
+  [4;36;1mBook Load (0.7ms)[0m   [0;1mSELECT * FROM "books" [0m
+Rendering template within layouts/books
+Rendering books/index
+Completed in 181ms (View: 138, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing BooksController#index (for 127.0.0.1 at 2009-02-18 00:10:49) [GET]
+  [4;35;1mBook Load (0.6ms)[0m   [0mSELECT * FROM "books" [0m
+Rendering template within layouts/books
+Rendering books/index
+Completed in 19ms (View: 14, DB: 1) | 200 OK [http://localhost/books]
+
+
+Processing BooksController#new (for 127.0.0.1 at 2009-02-18 00:10:50) [GET]
+Rendering template within layouts/books
+Rendering books/new
+  [4;36;1mAuthor Load (0.7ms)[0m   [0;1mSELECT * FROM "authors" ORDER BY name[0m
+Completed in 66ms (View: 61, DB: 1) | 200 OK [http://localhost/books/new]
+
+
+Processing AuthorsController#index (for 127.0.0.1 at 2009-02-18 00:10:55) [GET]
+  [4;35;1mAuthor Load (0.5ms)[0m   [0mSELECT * FROM "authors" [0m
+Rendering template within layouts/authors
+Rendering authors/index
+Completed in 15ms (View: 11, DB: 0) | 200 OK [http://localhost/authors]
+
+
+Processing AuthorsController#new (for 127.0.0.1 at 2009-02-18 00:10:57) [GET]
+Rendering template within layouts/authors
+Rendering authors/new
+Completed in 16ms (View: 12, DB: 0) | 200 OK [http://localhost/authors/new]
+
+
+Processing AuthorsController#create (for 127.0.0.1 at 2009-02-18 00:11:00) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"frH2BO7tgpJaStx5hvYHMjDHpb0xt+NWgNf7T1BFGa8=", "author"=>{"name"=>"Bill Clinton"}}
+  [4;36;1mAuthor Create (0.3ms)[0m   [0;1mINSERT INTO "authors" ("name", "updated_at", "created_at") VALUES('Bill Clinton', '2009-02-18 08:11:00', '2009-02-18 08:11:00')[0m
+Redirected to #<Author:0x2194ba8>
+Completed in 18ms (DB: 0) | 302 Found [http://localhost/authors]
+
+
+Processing AuthorsController#show (for 127.0.0.1 at 2009-02-18 00:11:00) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mAuthor Load (0.2ms)[0m   [0mSELECT * FROM "authors" WHERE ("authors"."id" = 1) [0m
+Rendering template within layouts/authors
+Rendering authors/show
+Completed in 19ms (View: 12, DB: 0) | 200 OK [http://localhost/authors/1]
+
+
+Processing AuthorsController#index (for 127.0.0.1 at 2009-02-18 00:11:01) [GET]
+  [4;36;1mAuthor Load (0.4ms)[0m   [0;1mSELECT * FROM "authors" [0m
+Rendering template within layouts/authors
+Rendering authors/index
+Completed in 74ms (View: 69, DB: 0) | 200 OK [http://localhost/authors]
+
+
+Processing AuthorsController#new (for 127.0.0.1 at 2009-02-18 00:11:02) [GET]
+Rendering template within layouts/authors
+Rendering authors/new
+Completed in 21ms (View: 15, DB: 0) | 200 OK [http://localhost/authors/new]
+
+
+Processing AuthorsController#create (for 127.0.0.1 at 2009-02-18 00:11:09) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"frH2BO7tgpJaStx5hvYHMjDHpb0xt+NWgNf7T1BFGa8=", "author"=>{"name"=>"Barack Obama"}}
+  [4;35;1mAuthor Create (0.3ms)[0m   [0mINSERT INTO "authors" ("name", "updated_at", "created_at") VALUES('Barack Obama', '2009-02-18 08:11:09', '2009-02-18 08:11:09')[0m
+Redirected to #<Author:0x23d005c>
+Completed in 9ms (DB: 0) | 302 Found [http://localhost/authors]
+
+
+Processing AuthorsController#show (for 127.0.0.1 at 2009-02-18 00:11:09) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mAuthor Load (0.2ms)[0m   [0;1mSELECT * FROM "authors" WHERE ("authors"."id" = 2) [0m
+Rendering template within layouts/authors
+Rendering authors/show
+Completed in 18ms (View: 13, DB: 0) | 200 OK [http://localhost/authors/2]
+
+
+Processing AuthorsController#index (for 127.0.0.1 at 2009-02-18 00:11:10) [GET]
+  [4;35;1mAuthor Load (0.4ms)[0m   [0mSELECT * FROM "authors" [0m
+Rendering template within layouts/authors
+Rendering authors/index
+Completed in 17ms (View: 13, DB: 0) | 200 OK [http://localhost/authors]
+
+
+Processing AuthorsController#new (for 127.0.0.1 at 2009-02-18 00:11:38) [GET]
+Rendering template within layouts/authors
+Rendering authors/new
+Completed in 18ms (View: 14, DB: 0) | 200 OK [http://localhost/authors/new]
+
+
+Processing AuthorsController#create (for 127.0.0.1 at 2009-02-18 00:11:41) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"frH2BO7tgpJaStx5hvYHMjDHpb0xt+NWgNf7T1BFGa8=", "author"=>{"name"=>"Steven D. Levitt"}}
+  [4;36;1mAuthor Create (0.3ms)[0m   [0;1mINSERT INTO "authors" ("name", "updated_at", "created_at") VALUES('Steven D. Levitt', '2009-02-18 08:11:41', '2009-02-18 08:11:41')[0m
+Redirected to #<Author:0x21b2978>
+Completed in 10ms (DB: 0) | 302 Found [http://localhost/authors]
+
+
+Processing AuthorsController#show (for 127.0.0.1 at 2009-02-18 00:11:41) [GET]
+  Parameters: {"id"=>"3"}
+  [4;35;1mAuthor Load (0.2ms)[0m   [0mSELECT * FROM "authors" WHERE ("authors"."id" = 3) [0m
+Rendering template within layouts/authors
+Rendering authors/show
+Completed in 16ms (View: 11, DB: 0) | 200 OK [http://localhost/authors/3]
+
+
+Processing AuthorsController#index (for 127.0.0.1 at 2009-02-18 00:11:43) [GET]
+  [4;36;1mAuthor Load (0.5ms)[0m   [0;1mSELECT * FROM "authors" [0m
+Rendering template within layouts/authors
+Rendering authors/index
+Completed in 17ms (View: 13, DB: 0) | 200 OK [http://localhost/authors]
+
+
+Processing AuthorsController#new (for 127.0.0.1 at 2009-02-18 00:11:44) [GET]
+Rendering template within layouts/authors
+Rendering authors/new
+Completed in 81ms (View: 13, DB: 0) | 200 OK [http://localhost/authors/new]
+
+
+Processing AuthorsController#create (for 127.0.0.1 at 2009-02-18 00:11:46) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"frH2BO7tgpJaStx5hvYHMjDHpb0xt+NWgNf7T1BFGa8=", "author"=>{"name"=>"Stephen J. Dubner"}}
+  [4;35;1mAuthor Create (0.4ms)[0m   [0mINSERT INTO "authors" ("name", "updated_at", "created_at") VALUES('Stephen J. Dubner', '2009-02-18 08:11:46', '2009-02-18 08:11:46')[0m
+Redirected to #<Author:0x24748c8>
+Completed in 11ms (DB: 0) | 302 Found [http://localhost/authors]
+
+
+Processing AuthorsController#show (for 127.0.0.1 at 2009-02-18 00:11:46) [GET]
+  Parameters: {"id"=>"4"}
+  [4;36;1mAuthor Load (0.2ms)[0m   [0;1mSELECT * FROM "authors" WHERE ("authors"."id" = 4) [0m
+Rendering template within layouts/authors
+Rendering authors/show
+Completed in 17ms (View: 11, DB: 0) | 200 OK [http://localhost/authors/4]
+
+
+Processing AuthorsController#index (for 127.0.0.1 at 2009-02-18 00:11:47) [GET]
+  [4;35;1mAuthor Load (0.5ms)[0m   [0mSELECT * FROM "authors" [0m
+Rendering template within layouts/authors
+Rendering authors/index
+Completed in 19ms (View: 14, DB: 1) | 200 OK [http://localhost/authors]
+
+
+Processing AuthorsController#index (for 127.0.0.1 at 2009-02-18 00:11:51) [GET]
+  [4;36;1mAuthor Load (0.6ms)[0m   [0;1mSELECT * FROM "authors" [0m
+Rendering template within layouts/authors
+Rendering authors/index
+Completed in 18ms (View: 13, DB: 1) | 200 OK [http://localhost/authors]
+
+
+Processing AuthorsController#index (for 127.0.0.1 at 2009-02-18 00:11:53) [GET]
+  [4;35;1mAuthor Load (0.5ms)[0m   [0mSELECT * FROM "authors" [0m
+Rendering template within layouts/authors
+Rendering authors/index
+Completed in 18ms (View: 14, DB: 1) | 200 OK [http://localhost/authors]
+
+
+Processing BooksController#index (for 127.0.0.1 at 2009-02-18 00:11:56) [GET]
+  [4;36;1mBook Load (0.5ms)[0m   [0;1mSELECT * FROM "books" [0m
+Rendering template within layouts/books
+Rendering books/index
+Completed in 18ms (View: 14, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing BooksController#new (for 127.0.0.1 at 2009-02-18 00:11:58) [GET]
+Rendering template within layouts/books
+Rendering books/new
+  [4;35;1mAuthor Load (0.9ms)[0m   [0mSELECT * FROM "authors" ORDER BY name[0m
+Completed in 23ms (View: 17, DB: 1) | 200 OK [http://localhost/books/new]
+
+
+Processing BooksController#edit (for 127.0.0.1 at 2009-02-18 00:12:02) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mBook Load (0.2ms)[0m   [0;1mSELECT * FROM "books" WHERE ("books"."id" = 1) [0m
+Rendering template within layouts/books
+Rendering books/edit
+Completed in 207ms (View: 138, DB: 0) | 200 OK [http://localhost/books/1/edit]
+
+
+Processing BooksController#index (for 127.0.0.1 at 2009-02-18 00:12:22) [GET]
+  [4;35;1mBook Load (0.7ms)[0m   [0mSELECT * FROM "books" [0m
+Rendering template within layouts/books
+Rendering books/index
+Completed in 21ms (View: 17, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing BooksController#edit (for 127.0.0.1 at 2009-02-18 00:12:23) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mBook Load (0.3ms)[0m   [0;1mSELECT * FROM "books" WHERE ("books"."id" = 1) [0m
+Rendering template within layouts/books
+Rendering books/edit
+  [4;35;1mAuthor Load (0.7ms)[0m   [0mSELECT * FROM "authors" ORDER BY name[0m
+Completed in 24ms (View: 18, DB: 1) | 200 OK [http://localhost/books/1/edit]
+
+
+Processing BooksController#update (for 127.0.0.1 at 2009-02-18 00:12:26) [PUT]
+  Parameters: {"commit"=>"Update", "authenticity_token"=>"frH2BO7tgpJaStx5hvYHMjDHpb0xt+NWgNf7T1BFGa8=", "id"=>"1", "book"=>{"title"=>"Freakonomics", "description"=>"Economics is not widely considered to be one of the sexier sciences. The annual Nobel Prize winner in that field never receives as much publicity as his or her compatriots in peace, literature, or physics. But if such slights are based on the notion that economics is dull, or that economists are concerned only with finance itself, Steven D. Levitt will change some minds. In Freakonomics (written with Stephen J. Dubner), Levitt argues that many apparent mysteries of everyday life don't need to be so mysterious: they could be illuminated and made even more fascinating by asking the right questions and drawing connections. For example, Levitt traces the drop in violent crime rates to a drop in violent criminals and, digging further, to the Roe v. Wade decision that preempted the existence of some people who would be born to poverty and hardship. Elsewhere, by analyzing data gathered from inner-city Chicago drug-dealing gangs, Levitt outlines a corporate structure much like McDonald's, where the top bosses make great money while scores of underlings make something below minimum wage. And in a section that may alarm or relieve worried parents, Levitt argues that parenting methods don't really matter much and that a backyard swimming pool is much more dangerous than a gun. These enlightening chapters are separated by effusive passages from Dubner's 2003 profile of Levitt in The New York Times Magazine, which led to the book being written. In a book filled with bold logic, such back-patting veers Freakonomics, however briefly, away from what Levitt actually has to say. Although maybe there's a good economic reason for that too, and we're just not getting it yet. --John Moe ", "author_id"=>"4"}}
+  [4;36;1mBook Load (0.2ms)[0m   [0;1mSELECT * FROM "books" WHERE ("books"."id" = 1) [0m
+  [4;35;1mBook Update (0.3ms)[0m   [0mUPDATE "books" SET "author_id" = 4, "updated_at" = '2009-02-18 08:12:26' WHERE "id" = 1[0m
+Redirected to #<Book:0x2286020>
+Completed in 12ms (DB: 1) | 302 Found [http://localhost/books/1]
+
+
+Processing BooksController#show (for 127.0.0.1 at 2009-02-18 00:12:26) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mBook Load (0.2ms)[0m   [0;1mSELECT * FROM "books" WHERE ("books"."id" = 1) [0m
+Rendering template within layouts/books
+Rendering books/show
+Completed in 24ms (View: 19, DB: 0) | 200 OK [http://localhost/books/1]
+
+
+Processing BooksController#index (for 127.0.0.1 at 2009-02-18 00:12:28) [GET]
+  [4;35;1mBook Load (0.5ms)[0m   [0mSELECT * FROM "books" [0m
+Rendering template within layouts/books
+Rendering books/index
+Completed in 19ms (View: 15, DB: 1) | 200 OK [http://localhost/books]
+
+
+Processing BooksController#edit (for 127.0.0.1 at 2009-02-18 00:12:30) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mBook Load (0.2ms)[0m   [0;1mSELECT * FROM "books" WHERE ("books"."id" = 2) [0m
+Rendering template within layouts/books
+Rendering books/edit
+  [4;35;1mAuthor Load (0.7ms)[0m   [0mSELECT * FROM "authors" ORDER BY name[0m
+Completed in 26ms (View: 21, DB: 1) | 200 OK [http://localhost/books/2/edit]
+
+
+Processing BooksController#update (for 127.0.0.1 at 2009-02-18 00:12:30) [PUT]
+  Parameters: {"commit"=>"Update", "authenticity_token"=>"frH2BO7tgpJaStx5hvYHMjDHpb0xt+NWgNf7T1BFGa8=", "id"=>"2", "book"=>{"title"=>"Blink", "description"=>"Blink is about the first two seconds of looking--the decisive glance that knows in an instant. Gladwell, the best-selling author of The Tipping Point, campaigns for snap judgments and mind reading with a gift for translating research into splendid storytelling. Building his case with scenes from a marriage, heart attack triage, speed dating, choking on the golf course, selling cars, and military maneuvers, he persuades readers to think small and focus on the meaning of \"thin slices\" of behavior. The key is to rely on our \"adaptive unconscious\"--a 24/7 mental valet--that provides us with instant and sophisticated information to warn of danger, read a stranger, or react to a new idea.\r\nGladwell includes caveats about leaping to conclusions: marketers can manipulate our first impressions, high arousal moments make us \"mind blind,\" focusing on the wrong cue leaves us vulnerable to \"the Warren Harding Effect\" (i.e., voting for a handsome but hapless president). In a provocative chapter that exposes the \"dark side of blink,\" he illuminates the failure of rapid cognition in the tragic stakeout and murder of Amadou Diallo in the Bronx. He underlines studies about autism, facial reading and cardio uptick to urge training that enhances high-stakes decision-making. In this brilliant, cage-rattling book, one can only wish for a thicker slice of Gladwell's ideas about what Blink Camp might look like. --Barbara Mackoff --This text refers to the Hardcover edition. ", "author_id"=>"2"}}
+  [4;36;1mBook Load (0.2ms)[0m   [0;1mSELECT * FROM "books" WHERE ("books"."id" = 2) [0m
+  [4;35;1mBook Update (0.3ms)[0m   [0mUPDATE "books" SET "author_id" = 2, "updated_at" = '2009-02-18 08:12:30' WHERE "id" = 2[0m
+Redirected to #<Book:0x2097480>
+Completed in 11ms (DB: 1) | 302 Found [http://localhost/books/2]
+
+
+Processing BooksController#show (for 127.0.0.1 at 2009-02-18 00:12:31) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mBook Load (0.3ms)[0m   [0;1mSELECT * FROM "books" WHERE ("books"."id" = 2) [0m
+Rendering template within layouts/books
+Rendering books/show
+Completed in 18ms (View: 13, DB: 0) | 200 OK [http://localhost/books/2]
+
+
+Processing BooksController#index (for 127.0.0.1 at 2009-02-18 00:12:32) [GET]
+  [4;35;1mBook Load (0.5ms)[0m   [0mSELECT * FROM "books" [0m
+Rendering template within layouts/books
+Rendering books/index
+Completed in 19ms (View: 15, DB: 0) | 200 OK [http://localhost/books]
+
+
+Processing BooksController#edit (for 127.0.0.1 at 2009-02-18 00:12:34) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mBook Load (0.2ms)[0m   [0;1mSELECT * FROM "books" WHERE ("books"."id" = 2) [0m
+Rendering template within layouts/books
+Rendering books/edit
+  [4;35;1mAuthor Load (0.8ms)[0m   [0mSELECT * FROM "authors" ORDER BY name[0m
+Completed in 25ms (View: 20, DB: 1) | 200 OK [http://localhost/books/2/edit]
+
+
+Processing BooksController#update (for 127.0.0.1 at 2009-02-18 00:12:37) [PUT]
+  Parameters: {"commit"=>"Update", "authenticity_token"=>"frH2BO7tgpJaStx5hvYHMjDHpb0xt+NWgNf7T1BFGa8=", "id"=>"2", "book"=>{"title"=>"Blink", "description"=>"Blink is about the first two seconds of looking--the decisive glance that knows in an instant. Gladwell, the best-selling author of The Tipping Point, campaigns for snap judgments and mind reading with a gift for translating research into splendid storytelling. Building his case with scenes from a marriage, heart attack triage, speed dating, choking on the golf course, selling cars, and military maneuvers, he persuades readers to think small and focus on the meaning of \"thin slices\" of behavior. The key is to rely on our \"adaptive unconscious\"--a 24/7 mental valet--that provides us with instant and sophisticated information to warn of danger, read a stranger, or react to a new idea.\r\nGladwell includes caveats about leaping to conclusions: marketers can manipulate our first impressions, high arousal moments make us \"mind blind,\" focusing on the wrong cue leaves us vulnerable to \"the Warren Harding Effect\" (i.e., voting for a handsome but hapless president). In a provocative chapter that exposes the \"dark side of blink,\" he illuminates the failure of rapid cognition in the tragic stakeout and murder of Amadou Diallo in the Bronx. He underlines studies about autism, facial reading and cardio uptick to urge training that enhances high-stakes decision-making. In this brilliant, cage-rattling book, one can only wish for a thicker slice of Gladwell's ideas about what Blink Camp might look like. --Barbara Mackoff --This text refers to the Hardcover edition. ", "author_id"=>"4"}}
+  [4;36;1mBook Load (0.2ms)[0m   [0;1mSELECT * FROM "books" WHERE ("books"."id" = 2) [0m
+  [4;35;1mBook Update (0.4ms)[0m   [0mUPDATE "books" SET "author_id" = 4, "updated_at" = '2009-02-18 08:12:37' WHERE "id" = 2[0m
+Redirected to #<Book:0x226e8a8>
+Completed in 10ms (DB: 1) | 302 Found [http://localhost/books/2]
+
+
+Processing BooksController#show (for 127.0.0.1 at 2009-02-18 00:12:37) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mBook Load (0.3ms)[0m   [0;1mSELECT * FROM "books" WHERE ("books"."id" = 2) [0m
+Rendering template within layouts/books
+Rendering books/show
+Completed in 24ms (View: 17, DB: 0) | 200 OK [http://localhost/books/2]
+
+
+Processing BooksController#index (for 127.0.0.1 at 2009-02-18 00:12:38) [GET]
+  [4;35;1mBook Load (0.6ms)[0m   [0mSELECT * FROM "books" [0m
+Rendering template within layouts/books
+Rendering books/index
+Completed in 18ms (View: 14, DB: 1) | 200 OK [http://localhost/books]
+
+
+Processing BooksController#new (for 127.0.0.1 at 2009-02-18 00:12:51) [GET]
+Rendering template within layouts/books
+Rendering books/new
+  [4;36;1mAuthor Load (0.7ms)[0m   [0;1mSELECT * FROM "authors" ORDER BY name[0m
+Completed in 22ms (View: 17, DB: 1) | 200 OK [http://localhost/books/new]
+
+
+Processing BooksController#create (for 127.0.0.1 at 2009-02-18 00:13:05) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"frH2BO7tgpJaStx5hvYHMjDHpb0xt+NWgNf7T1BFGa8=", "book"=>{"title"=>"The Audacity of Hope: Thoughts on Reclaiming the American Dream", "description"=>"Barack Obama's first book, Dreams from My Father, was a compelling and moving memoir focusing on personal issues of race, identity, and community. With his second book The Audacity of Hope, Obama engages themes raised in his keynote speech at the 2004 Democratic National Convention, shares personal views on faith and values and offers a vision of the future that involves repairing a \"political process that is broken\" and restoring a government that has fallen out of touch with the people. We had the opportunity to ask Senator Obama a few questions about writing, reading, and politics--see his responses below. --Daphne Durham", "author_id"=>"2"}}
+  [4;35;1mBook Create (0.4ms)[0m   [0mINSERT INTO "books" ("updated_at", "title", "description", "author_id", "created_at") VALUES('2009-02-18 08:13:05', 'The Audacity of Hope: Thoughts on Reclaiming the American Dream', 'Barack Obama''s first book, Dreams from My Father, was a compelling and moving memoir focusing on personal issues of race, identity, and community. With his second book The Audacity of Hope, Obama engages themes raised in his keynote speech at the 2004 Democratic National Convention, shares personal views on faith and values and offers a vision of the future that involves repairing a "political process that is broken" and restoring a government that has fallen out of touch with the people. We had the opportunity to ask Senator Obama a few questions about writing, reading, and politics--see his responses below. --Daphne Durham', 2, '2009-02-18 08:13:05')[0m
+Redirected to #<Book:0x208788c>
+Completed in 75ms (DB: 0) | 302 Found [http://localhost/books]
+
+
+Processing BooksController#show (for 127.0.0.1 at 2009-02-18 00:13:05) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mBook Load (0.3ms)[0m   [0;1mSELECT * FROM "books" WHERE ("books"."id" = 3) [0m
+Rendering template within layouts/books
+Rendering books/show
+Completed in 19ms (View: 14, DB: 0) | 200 OK [http://localhost/books/3]
+
+
+Processing BooksController#show (for 127.0.0.1 at 2009-02-18 00:13:30) [GET]
+  Parameters: {"id"=>"3"}
+  [4;35;1mBook Load (0.2ms)[0m   [0mSELECT * FROM "books" WHERE ("books"."id" = 3) [0m
+Rendering template within layouts/books
+Rendering books/show
+  [4;36;1mAuthor Load (0.2ms)[0m   [0;1mSELECT * FROM "authors" WHERE ("authors"."id" = 2) [0m
+Completed in 23ms (View: 17, DB: 0) | 200 OK [http://localhost/books/3]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (2.1ms)[0m   [0;1mCREATE TABLE "authors" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (2.2ms)[0m   [0;1mCREATE TABLE "books" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "description" text, "created_at" datetime, "updated_at" datetime, "author_id" integer) [0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (1.7ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (1.4ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM "schema_migrations"[0m
+  [4;36;1mSQL (1.5ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20090218080838')[0m
+  [4;35;1mSQL (1.4ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20090218074803')[0m
+  [4;36;1mSQL (3.0ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20090218080739')[0m
+
+
+Processing BooksController#index (for 127.0.0.1 at 2009-02-18 00:17:48) [GET]
+  [4;36;1mBook Load (0.6ms)[0m   [0;1mSELECT * FROM "books" [0m
+Rendering template within layouts/books
+Rendering books/index
+Completed in 95ms (View: 62, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing BooksController#index (for 127.0.0.1 at 2009-02-18 00:17:49) [GET]
+  [4;35;1mBook Load (0.3ms)[0m   [0mSELECT * FROM "books" [0m
+Rendering template within layouts/books
+Rendering books/index
+Completed in 16ms (View: 11, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-02-18 00:20:03) [GET]
+
+ActionController::UnknownAction (No action responded to index. Actions: ):
+  /Users/admin/.gem/ruby/1.8/gems/actionpack-2.3.0/lib/action_controller/filters.rb:617:in `call_filters'
+  /Users/admin/.gem/ruby/1.8/gems/actionpack-2.3.0/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+  /Users/admin/.gem/ruby/1.8/gems/actionpack-2.3.0/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+  /Users/admin/.gem/ruby/1.8/gems/actionpack-2.3.0/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+  /Users/admin/.gem/ruby/1.8/gems/actionpack-2.3.0/lib/action_controller/rescue.rb:154:in `perform_action_without_flash'
+  /Users/admin/.gem/ruby/1.8/gems/actionpack-2.3.0/lib/action_controller/flash.rb:141:in `perform_action'
+  /Users/admin/.gem/ruby/1.8/gems/actionpack-2.3.0/lib/action_controller/base.rb:523:in `send'
+  /Users/admin/.gem/ruby/1.8/gems/actionpack-2.3.0/lib/action_controller/base.rb:523:in `process_without_filters'
+  /Users/admin/.gem/ruby/1.8/gems/actionpack-2.3.0/lib/action_controller/filters.rb:606:in `process'
+  /Users/admin/.gem/ruby/1.8/gems/actionpack-2.3.0/lib/action_controller/base.rb:391:in `process'
+  /Users/admin/.gem/ruby/1.8/gems/actionpack-2.3.0/lib/action_controller/base.rb:386:in `call'
+  /Users/admin/.gem/ruby/1.8/gems/actionpack-2.3.0/lib/action_controller/routing/route_set.rb:433:in `call'
+  /Users/admin/.gem/ruby/1.8/gems/actionpack-2.3.0/lib/action_controller/dispatcher.rb:65:in `dispatch'
+  /Users/admin/.gem/ruby/1.8/gems/actionpack-2.3.0/lib/action_controller/dispatcher.rb:88:in `_call'
+  /Users/admin/.gem/ruby/1.8/gems/actionpack-2.3.0/lib/action_controller/dispatcher.rb:59:in `initialize'
+  /Users/admin/.gem/ruby/1.8/gems/activerecord-2.3.0/lib/active_record/query_cache.rb:29:in `call'
+  /Users/admin/.gem/ruby/1.8/gems/activerecord-2.3.0/lib/active_record/query_cache.rb:29:in `call'
+  /Users/admin/.gem/ruby/1.8/gems/activerecord-2.3.0/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+  /Users/admin/.gem/ruby/1.8/gems/activerecord-2.3.0/lib/active_record/query_cache.rb:9:in `cache'
+  /Users/admin/.gem/ruby/1.8/gems/activerecord-2.3.0/lib/active_record/query_cache.rb:28:in `call'
+  /Users/admin/.gem/ruby/1.8/gems/actionpack-2.3.0/lib/action_controller/params_parser.rb:15:in `call'
+  /Users/admin/.gem/ruby/1.8/gems/actionpack-2.3.0/lib/action_controller/rewindable_input.rb:25:in `call'
+  /Users/admin/.gem/ruby/1.8/gems/actionpack-2.3.0/lib/action_controller/session/cookie_store.rb:93:in `call'
+  /Users/admin/.gem/ruby/1.8/gems/actionpack-2.3.0/lib/action_controller/failsafe.rb:11:in `call'
+  /Users/admin/.gem/ruby/1.8/gems/actionpack-2.3.0/lib/action_controller/rack_ext/lock.rb:15:in `call'
+  /Users/admin/.gem/ruby/1.8/gems/actionpack-2.3.0/lib/action_controller/rack_ext/lock.rb:15:in `synchronize'
+  /Users/admin/.gem/ruby/1.8/gems/actionpack-2.3.0/lib/action_controller/rack_ext/lock.rb:15:in `call'
+  /Users/admin/.gem/ruby/1.8/gems/actionpack-2.3.0/lib/action_controller/dispatcher.rb:83:in `call'
+  /Users/admin/.gem/ruby/1.8/gems/rails-2.3.0/lib/rails/rack/static.rb:27:in `call'
+  /Users/admin/.gem/ruby/1.8/gems/rails-2.3.0/lib/rails/rack/log_tailer.rb:17:in `call'
+  /Users/admin/.gem/ruby/1.8/gems/rails-2.3.0/lib/commands/server.rb:100
+
+Rendering rescues/layout (not_found)
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-02-18 00:21:51) [GET]
+  [4;36;1mBook Load (0.3ms)[0m   [0;1mSELECT * FROM "books" [0m
+Rendering home/index
+
+ActionView::TemplateError (Missing template home/_book_listings.erb in view path app/views) on line #7 of app/views/home/index.html.erb:
+4: Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Vivamus sed nisi. Morbi aliquam ornare metus. Aliquam sed pede quis nulla porta rhoncus. Ut adipiscing aliquam enim. Sed laoreet justo in turpis. Aenean metus lorem, mollis elementum, pulvinar non, pharetra at, metus. Phasellus interdum tortor non tellus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Integer facilisis, erat sed aliquam tristique, mi augue tristique mauris, in mollis turpis tellus vel sem. Vivamus ac nibh ac lectus venenatis blandit. Morbi eget sem ac turpis sodales tincidunt. In in nunc commodo ante venenatis ornare. Aliquam sit amet ligula.	
+5: </p>
+6:  
+7: <%= render :partial => 'book_listings' %>
+8:  
+9: <p>Aliquam vestibulum ultricies velit. Vivamus pulvinar urna. Mauris tincidunt blandit massa. </p>
+
+    /Users/admin/.gem/ruby/1.8/gems/actionpack-2.3.0/lib/action_view/template.rb:221:in `find_full_path'
+    /Users/admin/.gem/ruby/1.8/gems/actionpack-2.3.0/lib/action_view/template.rb:102:in `initialize'
+    /Users/admin/.gem/ruby/1.8/gems/actionpack-2.3.0/lib/action_view/paths.rb:54:in `new'
+    /Users/admin/.gem/ruby/1.8/gems/actionpack-2.3.0/lib/action_view/paths.rb:54:in `find_template'
+    /Users/admin/.gem/ruby/1.8/gems/actionpack-2.3.0/lib/action_view/partials.rb:231:in `_unmemoized__pick_partial_template'
+    /Users/admin/.gem/ruby/1.8/gems/activesupport-2.3.0/lib/active_support/memoizable.rb:84:in `_pick_partial_template'
+    /Users/admin/.gem/ruby/1.8/gems/actionpack-2.3.0/lib/action_view/partials.rb:184:in `render_partial'
+    /Users/admin/.gem/ruby/1.8/gems/actionpack-2.3.0/lib/action_view/base.rb:249:in `render'
+    app/views/home/index.html.erb:7
+    /Users/admin/.gem/ruby/1.8/gems/actionpack-2.3.0/lib/action_view/renderable.rb:35:in `send'
+    /Users/admin/.gem/ruby/1.8/gems/actionpack-2.3.0/lib/action_view/renderable.rb:35:in `render'
+    /Users/admin/.gem/ruby/1.8/gems/actionpack-2.3.0/lib/action_view/template.rb:182:in `render_template'
+    /Users/admin/.gem/ruby/1.8/gems/actionpack-2.3.0/lib/action_view/base.rb:247:in `render'
+    /Users/admin/.gem/ruby/1.8/gems/actionpack-2.3.0/lib/action_controller/base.rb:1180:in `render_for_file'
+    /Users/admin/.gem/ruby/1.8/gems/actionpack-2.3.0/lib/action_controller/base.rb:906:in `render_without_benchmark'
+    /Users/admin/.gem/ruby/1.8/gems/actionpack-2.3.0/lib/action_controller/benchmarking.rb:51:in `render'
+    /Users/admin/.gem/ruby/1.8/gems/actionpack-2.3.0/lib/action_controller/benchmarking.rb:51:in `render'
+    /Users/admin/.gem/ruby/1.8/gems/actionpack-2.3.0/lib/action_controller/base.rb:1256:in `default_render'
+    /Users/admin/.gem/ruby/1.8/gems/actionpack-2.3.0/lib/action_controller/base.rb:1262:in `perform_action_without_filters'
+    /Users/admin/.gem/ruby/1.8/gems/actionpack-2.3.0/lib/action_controller/filters.rb:617:in `call_filters'
+    /Users/admin/.gem/ruby/1.8/gems/actionpack-2.3.0/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+    /Users/admin/.gem/ruby/1.8/gems/actionpack-2.3.0/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /Users/admin/.gem/ruby/1.8/gems/actionpack-2.3.0/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /Users/admin/.gem/ruby/1.8/gems/actionpack-2.3.0/lib/action_controller/rescue.rb:154:in `perform_action_without_flash'
+    /Users/admin/.gem/ruby/1.8/gems/actionpack-2.3.0/lib/action_controller/flash.rb:141:in `perform_action'
+    /Users/admin/.gem/ruby/1.8/gems/actionpack-2.3.0/lib/action_controller/base.rb:523:in `send'
+    /Users/admin/.gem/ruby/1.8/gems/actionpack-2.3.0/lib/action_controller/base.rb:523:in `process_without_filters'
+    /Users/admin/.gem/ruby/1.8/gems/actionpack-2.3.0/lib/action_controller/filters.rb:606:in `process'
+    /Users/admin/.gem/ruby/1.8/gems/actionpack-2.3.0/lib/action_controller/base.rb:391:in `process'
+    /Users/admin/.gem/ruby/1.8/gems/actionpack-2.3.0/lib/action_controller/base.rb:386:in `call'
+    /Users/admin/.gem/ruby/1.8/gems/actionpack-2.3.0/lib/action_controller/routing/route_set.rb:433:in `call'
+    /Users/admin/.gem/ruby/1.8/gems/actionpack-2.3.0/lib/action_controller/dispatcher.rb:65:in `dispatch'
+    /Users/admin/.gem/ruby/1.8/gems/actionpack-2.3.0/lib/action_controller/dispatcher.rb:88:in `_call'
+    /Users/admin/.gem/ruby/1.8/gems/actionpack-2.3.0/lib/action_controller/dispatcher.rb:59:in `initialize'
+    /Users/admin/.gem/ruby/1.8/gems/activerecord-2.3.0/lib/active_record/query_cache.rb:29:in `call'
+    /Users/admin/.gem/ruby/1.8/gems/activerecord-2.3.0/lib/active_record/query_cache.rb:29:in `call'
+    /Users/admin/.gem/ruby/1.8/gems/activerecord-2.3.0/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    /Users/admin/.gem/ruby/1.8/gems/activerecord-2.3.0/lib/active_record/query_cache.rb:9:in `cache'
+    /Users/admin/.gem/ruby/1.8/gems/activerecord-2.3.0/lib/active_record/query_cache.rb:28:in `call'
+    /Users/admin/.gem/ruby/1.8/gems/actionpack-2.3.0/lib/action_controller/params_parser.rb:15:in `call'
+    /Users/admin/.gem/ruby/1.8/gems/actionpack-2.3.0/lib/action_controller/rewindable_input.rb:25:in `call'
+    /Users/admin/.gem/ruby/1.8/gems/actionpack-2.3.0/lib/action_controller/session/cookie_store.rb:93:in `call'
+    /Users/admin/.gem/ruby/1.8/gems/actionpack-2.3.0/lib/action_controller/failsafe.rb:11:in `call'
+    /Users/admin/.gem/ruby/1.8/gems/actionpack-2.3.0/lib/action_controller/rack_ext/lock.rb:15:in `call'
+    /Users/admin/.gem/ruby/1.8/gems/actionpack-2.3.0/lib/action_controller/rack_ext/lock.rb:15:in `synchronize'
+    /Users/admin/.gem/ruby/1.8/gems/actionpack-2.3.0/lib/action_controller/rack_ext/lock.rb:15:in `call'
+    /Users/admin/.gem/ruby/1.8/gems/actionpack-2.3.0/lib/action_controller/dispatcher.rb:83:in `call'
+    /Users/admin/.gem/ruby/1.8/gems/rails-2.3.0/lib/rails/rack/static.rb:27:in `call'
+    /Users/admin/.gem/ruby/1.8/gems/rails-2.3.0/lib/rails/rack/log_tailer.rb:17:in `call'
+    /Users/admin/.gem/ruby/1.8/gems/rails-2.3.0/lib/commands/server.rb:100
+
+Rendered rescues/_trace (31.2ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-02-18 00:22:00) [GET]
+  [4;35;1mBook Load (0.3ms)[0m   [0mSELECT * FROM "books" [0m
+Rendering home/index
+Rendered books/_book_listings (0.2ms)
+Completed in 18ms (View: 14, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-02-18 00:22:50) [GET]
+  [4;36;1mBook Load (0.3ms)[0m   [0;1mSELECT * FROM "books" [0m
+Rendering home/index
+Rendered home/_book_listings (0.2ms)
+Completed in 19ms (View: 15, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing BooksController#index (for 127.0.0.1 at 2009-02-18 00:22:53) [GET]
+Filter chain halted as [:authenticate] rendered_or_redirected.
+Completed in 10ms (View: 10, DB: 0) | 401 Unauthorized [http://localhost/books]
+
+
+Processing BooksController#index (for 127.0.0.1 at 2009-02-18 00:23:00) [GET]
+Filter chain halted as [:authenticate] rendered_or_redirected.
+Completed in 15ms (View: 14, DB: 0) | 401 Unauthorized [http://localhost/books]
+
+
+Processing BooksController#index (for 127.0.0.1 at 2009-02-18 00:23:02) [GET]
+  [4;35;1mBook Load (0.3ms)[0m   [0mSELECT * FROM "books" [0m
+Rendering template within layouts/books
+Rendering books/index
+Completed in 332ms (View: 327, DB: 0) | 200 OK [http://localhost/books]

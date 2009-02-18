@@ -1,0 +1,17 @@
+<% if @books.empty? %>
+	<h2>We don't have any books in stock, but they're coming!</h2>
+<% else %>
+	<h2>Current Inventory</h2>
+	<table>
+		<tr>
+			<th>Title</th>
+			<th>Description</th>
+		</tr>
+			<% for book in @books %>
+			<tr>
+				<td><%=h book.title %></td>
+				<td><%=h book.description %></td>
+			</tr>
+			<% end %>
+	</table>
+<% end %>
